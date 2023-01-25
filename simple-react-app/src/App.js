@@ -26,7 +26,7 @@ const SAMPLE_FLASHCARDS = [
   },
   {
     id: 1,
-    question: "Question 2",
+    question: "What is your problem?",
     answer: "Answer",
     options: [
       "Answer",
