@@ -36,10 +36,21 @@ function App() {
     return textArea.value
   }
 
+
+  function handleSubmit(event) {
+    event.preventDefault()
+  }
+
   return (
-    <div className="container">
+    <>
+    <form className="header" onSubmit={handleSubmit}>
+
+    </form>
+      <div className="container">
       <FlashcardList flashcards={flashcards} />
-    </div>
+      </div>
+    </>
+    
     
   );
 }
