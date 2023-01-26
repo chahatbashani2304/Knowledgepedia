@@ -13,6 +13,15 @@ function App() {
 
   useEffect(() => {
     axios
+      .get("https://opentdb.com/api_category.php")
+      .then(res => {
+        console.log(res.data)
+      })
+  }, [])
+
+
+  useEffect(() => {
+    axios
       .get("https://opentdb.com/api.php?amount=10")
       .then(res => {
         setFlashcards(res.data.results.map((questionItem, index) => {
