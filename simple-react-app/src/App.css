@@ -40,6 +40,10 @@ body {
     cursor: pointer;
 }
 
+.btn:hover {
+    background-color: hsl(200, 100%, 40%);;
+}
+
 
 .card-grid {
     display: grid;
