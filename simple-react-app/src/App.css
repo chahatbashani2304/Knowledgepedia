@@ -4,10 +4,17 @@ body {
 }
 
 
+.container {
+    max-width: 900px;
+    
+}
+
+
 .card-grid {
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem
 }
 
 .card {
@@ -20,7 +27,6 @@ body {
     background-color: whitesmoke;
     transform-style: preserve-3d;
     height: 150px;
-    width: 150px;
     transition: 150ms;
     cursor: pointer;
     transform: perspective(1000px) rotateY(var(--rotate-y, 0))
