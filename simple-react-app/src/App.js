@@ -68,7 +68,7 @@ function App() {
       <label htmlFor="amount">No of Questions</label>
       <input type="number" id="amount" min="1" step="1" defaultValue={10} ref={amountEl} />
       <div className="form-group">
-        <button className="btn"></button>
+        <button className="btn">Generate</button>
 
       </div>
     </form>
