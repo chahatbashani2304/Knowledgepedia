@@ -7,15 +7,17 @@ import axios from 'axios';
 function App() {
 
   const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS)
+  const [categories, setCategories] = useState([])
 
   const categoryEl = useRef()
+  const amountEl = useRef()
 
 
   useEffect(() => {
     axios
       .get("https://opentdb.com/api_category.php")
       .then(res => {
-        console.log(res.data)
+        setCategories(res.data.trivia_categories)
       })
   }, [])
 
@@ -56,9 +58,18 @@ function App() {
     <>
     <form className="header" onSubmit={handleSubmit}>
       <div className="form-group">
-        <label htmlForm="category">Category</label>
+        <label htmlFor="category">Category</label>
         <select id="category" ref={categoryEl}>
+          {categories.map(category => {
+            return <option value={category.id} key={category.id}>{category.name}</option>
+          })}
         </select>
+      </div>
+      <label htmlFor="amount">No of Questions</label>
+      <input type="number" id="amount" min="1" step="1" defaultValue={10} ref={amountEl} />
+      <div className="form-group">
+        <button className="btn"></button>
+
       </div>
     </form>
       <div className="container">
