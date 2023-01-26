@@ -26,7 +26,7 @@ const SAMPLE_FLASHCARDS = [
     ]
   },
   {
-    id: 1,
+    id: 2,
     question: "What is your problem?",
     answer: "Answer",
     options: [
@@ -34,6 +34,17 @@ const SAMPLE_FLASHCARDS = [
       "Answer1",
       "Answer2",
       "Answer3"
+    ]
+  },
+  {
+    id: 3,
+    question: "How old are you?",
+    answer: "23",
+    options: [
+      "21",
+      "22",
+      "23",
+      "24"
     ]
   }
 ]
