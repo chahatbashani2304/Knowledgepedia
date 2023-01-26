@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import FlashcardList from './components/FlashcardList';
 import './App.css';
 import axios from 'axios';
@@ -7,6 +7,8 @@ import axios from 'axios';
 function App() {
 
   const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS)
+
+  const categoryEl = useRef()
 
 
   useEffect(() => {
@@ -44,7 +46,11 @@ function App() {
   return (
     <>
     <form className="header" onSubmit={handleSubmit}>
-
+      <div className="form-group">
+        <label htmlForm="category">Category</label>
+        <select id="category" ref={categoryEl}>
+        </select>
+      </div>
     </form>
       <div className="container">
       <FlashcardList flashcards={flashcards} />
