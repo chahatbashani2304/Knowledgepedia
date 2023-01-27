@@ -59,6 +59,7 @@ function App() {
   return (
     <>
     <form className="header" onSubmit={handleSubmit}>
+      <div className="title">TRIVIA APP</div>
       <div className="form-group">
         <label htmlFor="category">Category</label>
         <select id="category" ref={categoryEl}>
